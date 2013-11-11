@@ -29,9 +29,20 @@ var LazyLoad = (function() {
                                   understand the bracket closure [data-something]
      */
     function LazyLoad(datatype, convertDt) {
+        // Declare all variables
         this._images = [];
         this._datatype = null;
-
+        
+        // Prepare default arguments
+        if (datatype === undefined) {
+            datatype = 'data-lazyload';
+        }
+        
+        if (convertDt === undefined) {
+            convertDt = true;
+        }
+        
+        // Call the "constructor"
         this._init(datatype, !!convertDt);
     }
 

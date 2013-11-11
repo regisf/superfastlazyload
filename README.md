@@ -3,7 +3,7 @@ SuperFastLazyLoad
 
 A pure javascript images lazy loader. And it's fast, really fast.  
 
-= Install it
+## Install it
 
 Download the zip or clone and add into you body:
 
@@ -11,7 +11,7 @@ Download the zip or clone and add into you body:
 <script type="text/javascript" src="/path/to/lazyload.min.js"></script>
 ```
 
-= Using it
+## Using it
 
 For each images that needs to be lazyloaded add an attribute. For example ```data-lazyload``` but you should use
 anything else.The only thing required is the real image source ```data-src="/some/path/to/image"```
@@ -40,7 +40,7 @@ Next Some where in your javascript (here on document loading with jQuery):
 That's all!
 
 
-= How fast
+## How fast
 
 I've created a huge page with near 3000 images to watch. It takes less than a millisecond 
 to determinate if an image must be displayed or not.

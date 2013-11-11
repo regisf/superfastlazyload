@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Super Fast Lazyload test</title>
+        <script src="LazyLoad.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script>
+            function onLoad() {
+                var images = [];
+                for (var i=0; i < 3000; i++) {
+                    images.push('<img src="https://www.parisianhome.com/static/img/wait.gif" style="width:320px; height: 200px;" data-src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Mafate_Taibit_dsc00571.jpg/320px-Mafate_Taibit_dsc00571.jpg" data-lazyload alt="Load me">')
+                }
+                document.getElementById('images').innerHTML = images.join('');
+                document.getElementById('info').innerHTML = "3000 images and no freeze! When I told you it's fast!";
+                var loader = new LazyLoad('data-lazyload', true);
+            }
+        </script>
+    </head>
+    <body onload="onLoad()">
+        <h1 id="info">Please wait</h1>
+        <div id="images">
+        </div>
+    </body>
+ </html>
